@@ -9,21 +9,23 @@ import { PUBLIC_ROUTES } from './public.routes';
 import { PublicComponent } from './public.component';
 import {
     HeaderComponent, 
-    HomeComponent
+    HomeComponent,
+    FooterComponent
 } from './public.index';
 
 @NgModule({
-    declarations: [
-        PublicComponent,
-        HeaderComponent,
-        HomeComponent
-    ],
-    exports: [
-        PublicComponent
-    ],
-    imports: [
-        PUBLIC_ROUTES,
-        CommonModule
-    ]
+   declarations: [
+      PublicComponent,
+      HeaderComponent,
+      HomeComponent,
+      FooterComponent
+   ],
+   exports: [
+      PublicComponent
+   ],
+   imports: [
+      PUBLIC_ROUTES,
+      CommonModule
+   ]
 })
 export class PublicModule { }
