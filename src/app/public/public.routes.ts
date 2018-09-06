@@ -9,7 +9,8 @@ const publicRoutes: Routes = [
         path: '',
         component: PublicComponent,
         children: [
-            { path: 'home', component: HomeComponent, data: { titulo: 'Home' } }
+            { path: 'home', component: HomeComponent, data: { titulo: 'Home' } },
+            { path: '', redirectTo: '/home', pathMatch: 'full' }
         ]
     }
 ];

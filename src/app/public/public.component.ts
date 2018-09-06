@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+declare function init_plugins();
 
 @Component({
     selector: 'app-public',
     templateUrl: './public.component.html'
 })
-export class PublicComponent implements OnInit {
+export class PublicComponent {
 
-    constructor() { }
-
-    ngOnInit() {
-    }
+    constructor() {
+        init_plugins();
+     }
 
 }
