@@ -1,9 +1,3 @@
-/*
-  Theme Name: Regna
-  Theme URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
-  Author: BootstrapMade.com
-  License: https://bootstrapmade.com/license/
-*/
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -473,63 +467,128 @@ app-header.mobile-nav-active #mobile-nav-toggle {
   color: #999;
 }
 
-/* About Us Section
+/* More info button
 --------------------------------*/
-#about {
+.btn-more-info {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #ed2a5c;
+  color: #ed2a5c;
+}
+
+.btn-more-info:hover {
+  background: #ed2a5c;
+  color: #fff;
+}
+/* Inbound Section
+--------------------------------*/
+#inbound { 
   background: #fff;
   padding: 80px 0;
 }
 
-#about .about-container .background {
-  min-height: 300px;
-  background: url(../img/about-img.jpg) center top no-repeat;
+#inbound .inbound-container .background {
+  min-height: 500px;
+  background-size: cover;
+  background: url(../img/inbound-img.png) center top no-repeat;
   margin-bottom: 10px;
 }
 
-#about .about-container .content {
+#inbound .inbound-container .content {
   background: #fff;
 }
 
-#about .about-container .title {
+#inbound .inbound-container .title {
   color: #333;
   font-weight: 700;
   font-size: 32px;
 }
 
 @media (max-width: 768px) {
-  #about .about-container .title {
+  #inbound .inbound-container .title {
     padding-top: 15px;
   }
 }
 
-#about .about-container p {
+#inbound .inbound-container p {
   line-height: 26px;
 }
 
-#about .about-container p:last-child {
+#inbound .inbound-container p:last-child {
   margin-bottom: 0;
 }
 
-#about .about-container .icon-box {
+#inbound .inbound-container .icon-box {
   background: #fff;
   background-size: cover;
   padding: 0 0 30px 0;
 }
 
-#about .about-container .icon-box .icon {
+/* Neuroturism Section
+--------------------------------*/
+#neuroturism {
+  background: #f7f7f7;
+  padding: 80px 0;
+}
+
+#neuroturism .neuroturism-container .background {
+  min-height: 300px;
+  background: url(../img/inbound-img.png) center top no-repeat;
+  margin-bottom: 10px;
+}
+
+#neuroturism .neuroturism-container .content {
+  background: #f7f7f7;
+}
+
+#neuroturism .neuroturism-container .title {
+  color: #333;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+@media (max-width: 768px) {
+  #neuroturism .neuroturism-container .title {
+    padding-top: 15px;
+  }
+}
+
+#neuroturism .neuroturism-container p {
+  line-height: 26px;
+}
+
+#neuroturism .neuroturism-container p:last-child {
+  margin-bottom: 0;
+}
+
+#neuroturism .neuroturism-container .icon-box {
+  background: #f7f7f7;
+  background-size: cover;
+  padding: 0 0 30px 0;
+}
+
+#neuroturism .neuroturism-container .icon-box .icon {
   float: left;
-  background: #fff;
+  background: #f7f7f7;
   padding: 16px;
   border-radius: 50%;
   border: 2px solid #ed2a5c;
 }
 
-#about .about-container .icon-box .icon i {
+#neuroturism .neuroturism-container .icon-box .icon i {
   color: #ed2a5c;
   font-size: 24px;
 }
 
-#about .about-container .icon-box .title {
+#neuroturism .neuroturism-container .icon-box .title {
   margin-left: 80px;
   font-weight: 500;
   margin-bottom: 5px;
@@ -537,11 +596,11 @@ app-header.mobile-nav-active #mobile-nav-toggle {
   text-transform: uppercase;
 }
 
-#about .about-container .icon-box .title a {
+#neuroturism .neuroturism-container .icon-box .title a {
   color: #111;
 }
 
-#about .about-container .icon-box .description {
+#neuroturism .neuroturism-container .icon-box .description {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
@@ -583,6 +642,13 @@ app-header.mobile-nav-active #mobile-nav-toggle {
   height: 200px;
   position: relative;
   background: #fafafa;
+}
+
+#services .box p {
+  overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 #services .icon {
@@ -827,11 +893,6 @@ app-header.mobile-nav-active #mobile-nav-toggle {
 #contact {
   background: #f7f7f7;
   padding: 80px 0 40px 0;
-}
-
-#contact #google-map {
-  height: 300px;
-  margin-bottom: 20px;
 }
 
 #contact .info {
