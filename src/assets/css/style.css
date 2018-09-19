@@ -4,7 +4,7 @@
 body {
   background: #fff;
   color: #666666;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Aller", sans-serif;
 }
 
 a {
@@ -23,7 +23,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Aller", sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
@@ -73,6 +73,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+# Fuentes
+--------------------------------------------------------------*/
+@font-face {
+  font-family: Aller-bold;
+  src: url(../fonts/Aller_Bd.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Aller;
+  src: url(../fonts/Aller_Rg.ttf);
+}
+/*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 #header {
@@ -95,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 6px 0;
   line-height: 1;
-  font-family: "Poppins", sans-serif;
+  font-family: "Aller-bold", "Aller", sans-serif;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -133,8 +146,17 @@ h1, h2, h3, h4, h5, h6 {
   display: table;
   width: 100%;
   height: 100vh;
-  background: url(../img/hero-bg.jpg) top center fixed;
+  background: url(http://inturea.com/wp-content/uploads/2015/12/inturea_agencia_inbound_marketing_turistico_video_cabecera.mp4) top center fixed;
   background-size: cover;
+}
+
+#hero #video {
+  position: absolute;
+  z-index: -999;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
 }
 
 #hero .hero-container {
@@ -144,6 +166,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 10px;
   text-align: center;
   vertical-align: middle;
+  z-index: 1;
 }
 
 #hero h1 {
@@ -177,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: "Aller", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -273,10 +296,10 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   display: inline-block;
   color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-family: "Aller", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 14px;
   outline: none;
 }
 
@@ -323,7 +346,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #333;
   transition: 0.3s;
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   text-transform: none;
 }
 
@@ -470,7 +493,7 @@ app-header.mobile-nav-active #mobile-nav-toggle {
 /* More info button
 --------------------------------*/
 .btn-more-info {
-  font-family: "Poppins", sans-serif;
+  font-family: "Aller", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -622,7 +645,7 @@ app-header.mobile-nav-active #mobile-nav-toggle {
 #facts .counters p {
   padding: 0;
   margin: 0 0 20px 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Aller", sans-serif;
   font-size: 14px;
 }
 
@@ -639,6 +662,7 @@ app-header.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 50px;
   text-align: center;
   border: 1px solid #e6e6e6;
+  border-top-right-radius: 50%;
   height: 200px;
   position: relative;
   background: #fafafa;
@@ -727,7 +751,7 @@ app-header.mobile-nav-active #mobile-nav-toggle {
 }
 
 #call-to-action .cta-btn {
-  font-family: "Poppins", sans-serif;
+  font-family: "Aller", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
