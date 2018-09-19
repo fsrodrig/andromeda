@@ -14,7 +14,7 @@
     </video>
 
     <h2>Una galaxia de brillantes y nuevas ideas, siempre estamos en constante movimiento</h2>
-    <a href="#services" class="btn-get-started">Nuestros Servicios</a>
+    <a pageScroll [pageScrollOffset]="70" [pageScrollEasing]="myEasing" [pageScrollDuration]="1500" href="#services" class="btn-get-started">Nuestros Servicios</a>
   </div>
 </section><!-- #hero -->
 
@@ -98,7 +98,7 @@
             anim id est laborum.</p>
         </div>
         <div class="col-lg-3 cta-btn-container text-center">
-          <a class="cta-btn align-middle" href="#">Leenos</a>
+          <a class="cta-btn align-middle" [routerLink]="['/blog']" >Leenos</a>
         </div>
       </div>
 

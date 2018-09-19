@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
+import {NgxPageScrollModule} from 'ngx-page-scroll';
 
 // Rutas
 import { PUBLIC_ROUTES } from './public.routes';
@@ -25,7 +26,8 @@ import {
    imports: [
       PUBLIC_ROUTES,
       CommonModule,
-      SharedModule
+      SharedModule,
+      NgxPageScrollModule
    ]
 })
 export class PublicModule { }
