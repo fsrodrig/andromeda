@@ -1,6 +1,7 @@
 // Modulos
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
 
 // Rutas
 import { PUBLIC_ROUTES } from './public.routes';
@@ -8,24 +9,23 @@ import { PUBLIC_ROUTES } from './public.routes';
 // Componentes
 import { PublicComponent } from './public.component';
 import {
-    HeaderComponent, 
     HomeComponent,
-    FooterComponent
+    BlogComponent
 } from './public.index';
 
 @NgModule({
    declarations: [
       PublicComponent,
-      HeaderComponent,
       HomeComponent,
-      FooterComponent
+      BlogComponent
    ],
    exports: [
       PublicComponent
    ],
    imports: [
       PUBLIC_ROUTES,
-      CommonModule
+      CommonModule,
+      SharedModule
    ]
 })
 export class PublicModule { }
