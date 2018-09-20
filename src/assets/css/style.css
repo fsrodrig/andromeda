@@ -684,14 +684,14 @@ app-header.mobile-nav-active #mobile-nav-toggle {
   border: 6px solid #fff;
 }
 
-#services .icon a {
+/* #services .icon a {
   display: inline-block;
   background: #ed2a5c;
   border: 2px solid #ed2a5c;
   padding: 16px;
   border-radius: 50%;
   transition: 0.3s;
-}
+} */
 
 #services .icon i {
   color: #fff;
@@ -1031,4 +1031,19 @@ app-header.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   font-size: 13px;
   color: #ccc;
+}
+
+.icon-service {
+  display: inline-block !important;
+  /* background: #ed2a5c; */
+  border: 1.5px solid #ed2a5c !important;
+  padding: 5px !important;
+  border-radius: 50% !important;
+  transition: 0.3s !important;
+}
+
+.icon-service img {
+  width: 60px;
+  margin-top: -1px;
+  margin-left: 1px;
 }
