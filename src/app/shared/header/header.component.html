@@ -1,7 +1,7 @@
 <!--==========================
   Header
   ============================-->
-<header id="header">
+<header id="header" [ngClass]="{'header-other': getRoute()}">
   <div class="container">
 
     <div id="logo" class="pull-left">
@@ -12,10 +12,10 @@
 
     <nav id="nav-menu-container">
       <ul class="nav-menu">
-        <li class="menu-active"><a href="#home">Home</a></li>
-        <li><a href="#inbound">Inbound</a></li>
-        <li><a href="#neuroturism">Neuroturismo</a></li>
-        <li class="menu-has-children"><a href="#services">Servicios</a>
+        <!-- <li class="menu-active"><a href="#home">Home</a></li> -->
+        <li><a (click)="goTo('inbound')" href="#inbound">Inbound</a></li>
+        <li><a (click)="goTo('neuroturism')" href="#neuroturism">Neuroturismo</a></li>
+        <li class="menu-has-children"><a (click)="goTo('services')" href="#services">Servicios</a>
           <ul>
             <li><a href="#">Plan de marketing</a></li>
             <li><a href="#">Contenidos digitales</a></li>
@@ -26,7 +26,7 @@
             <li><a href="#">Más servicios...</a></li>
           </ul>
         </li>
-        <li><a href="#team">Nosotros</a></li>
+        <li><a (click)="goTo('team')" href="#team">Nosotros</a></li>
         <li><a href="#blog">Blog</a></li>
       </ul>
     </nav><!-- #nav-menu-container -->
