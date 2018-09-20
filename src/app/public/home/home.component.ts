@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { EasingLogic } from 'ngx-page-scroll';
 
+declare function init_plugins();
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
 
-  myEasing: EasingLogic;
+  constructor() {
+    init_plugins();
+   }
 
   constructor() {
 

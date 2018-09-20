@@ -15,15 +15,10 @@
 
     <nav id="nav-menu-container">
       <ul class="nav-menu">
-        <li class="menu-active"><a pageScroll [pageScrollOffset]="0" [pageScrollEasing]="myEasing" [pageScrollDuration]="1500"
-            [routerLink]="['/home']" routerLinkActive="active" href="#hero">Home</a></li>
-        <li><a pageScroll [pageScrollOffset]="70" [pageScrollEasing]="myEasing" [pageScrollDuration]="1500"
-            [routerLink]="['/home']" fragment="inbound" routerlinkActive="active" href="#inbound">Inbound</a></li>
-        <li>
-          <a pageScroll [pageScrollOffset]="70" [pageScrollEasing]="myEasing" [pageScrollDuration]="1500"
-          [routerLink]="['/home']" fragment="neuroturism" routerLinkActive="active" href="#neuroturism">Neuroturismo</a></li>
-        <li class="menu-has-children"><a pageScroll [pageScrollOffset]="70" [pageScrollEasing]="myEasing"
-            [pageScrollDuration]="1500" [routerLink]="['/home']" fragment="services" href="#services">Servicios</a>
+        <!-- <li class="menu-active"><a href="#home">Home</a></li> -->
+        <li><a (click)="goTo('inbound')" href="#inbound">Inbound</a></li>
+        <li><a (click)="goTo('neuroturism')" href="#neuroturism">Neuroturismo</a></li>
+        <li class="menu-has-children"><a (click)="goTo('services')" href="#services">Servicios</a>
           <ul>
             <li><a href="#">Plan de marketing</a></li>
             <li><a href="#">Contenidos digitales</a></li>
@@ -34,9 +29,8 @@
             <li><a href="#">Más servicios...</a></li>
           </ul>
         </li>
-        <li><a pageScroll [pageScrollOffset]="70" [pageScrollEasing]="myEasing" [pageScrollDuration]="1500"
-            [routerLink]="['/home']" fragment="team" href="#team">Nosotros</a></li>
-        <li><a [routerLink]="['/blog']" routerLinkActive="menu-active" href="#blog">Blog</a></li>
+        <li><a (click)="goTo('team')" href="#team">Nosotros</a></li>
+        <li><a href="#blog">Blog</a></li>
       </ul>
     </nav><!-- #nav-menu-container -->
   </div>
