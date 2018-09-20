@@ -1,5 +1,5 @@
 import {
-  Component, OnChanges
+  Component, OnChanges, HostListener
 } from '@angular/core';
 import {
   EasingLogic
@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnChanges {
 
   myEasing: EasingLogic;
+  showIsologo = true;
 
   constructor(
     private _router: Router
@@ -39,6 +40,16 @@ export class HeaderComponent implements OnChanges {
       return true
     }
     return false;
+  }
+
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (number > 0) {
+      this.showIsologo = false;
+    } else {
+      this.showIsologo = true;
+    }
   }
 
 }
