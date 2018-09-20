@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnChanges {
 
+  showIsologo = true;
+
   constructor(
     private _router: Router
   ) { }
@@ -22,6 +24,10 @@ export class HeaderComponent implements OnChanges {
       return true
     }
     return false;
+  }
+
+  goTo(seccion: string) {
+    this._router.navigate(['/home'], {fragment: seccion});
   }
 
   @HostListener("window:scroll", [])
