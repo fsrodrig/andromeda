@@ -1,5 +1,5 @@
 import {
-  Component
+  Component, HostListener
 } from '@angular/core';
 import {
   EasingLogic
@@ -12,6 +12,7 @@ import {
 export class HeaderComponent {
 
   myEasing: EasingLogic;
+  showIsologo = true;
 
   constructor() {
 
@@ -25,6 +26,16 @@ export class HeaderComponent {
       }
     };
 
+  }
+
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (number > 0) {
+      this.showIsologo = false;
+    } else {
+      this.showIsologo = true;
+    }
   }
 
 }
