@@ -130,6 +130,10 @@ h1, h2, h3, h4, h5, h6 {
   #header #logo img {
     max-height: 40px;
   }
+  #header #logo img.iso {
+    max-height: 80px;
+    max-width: 80px;
+  }
 }
 
 #header.header-fixed {
@@ -1046,4 +1050,9 @@ app-header.mobile-nav-active #mobile-nav-toggle {
   width: 60px;
   margin-top: -1px;
   margin-left: 1px;
+}
+
+.iso-header {
+  opacity: 0.2;
+  text-align: center;
 }
