@@ -10,7 +10,7 @@ declare function init_plugins();
 export class BlogComponent implements OnInit {
 
   constructor() {
-    init_plugins();
+    // init_plugins();
    }
 
   ngOnInit() {

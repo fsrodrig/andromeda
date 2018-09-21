@@ -1,8 +1,10 @@
 import {Routes, RouterModule} from '@angular/router';
 
 import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
+   { path: 'login', component: LoginComponent},
    { path: '**', component: NopagefoundComponent },
 ];
 

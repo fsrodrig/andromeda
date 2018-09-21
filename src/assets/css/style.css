@@ -1070,3 +1070,14 @@ app-header.mobile-nav-active #mobile-nav-toggle {
   opacity: 0.2 !important;
   text-align: center;
 }
+
+/*--------------------------------------------------------------
+# Login
+--------------------------------------------------------------*/
+
+.form-horizontal label {
+  margin-bottom: 0px; 
+}
+
+.form-group {
+  margin-bottom: 25px; }
