@@ -1,3 +1,44 @@
-<p>
-  post works!
-</p>
+<div class="card">
+  <div class="card-body">
+      <div class="row">
+          <h2 class="m-3">Posts</h2>
+          <div class=" col text-right">
+            <button type="button" class="btn waves-effect waves-light btn-primary m-3" (click)="create()">
+              <i class="fa fa-plus "></i>
+              Nuevo Post
+            </button>
+          </div>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Titulo</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Autor</th>
+                <th scope="col">Foto</th>
+                <th scope="col">Estado</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let post of posts | async">
+                <th scope="row">{{ post.titulo }}</th>
+                <td>{{ post.fecha | date:'dd-MM-yyyy' }}</td>
+                <td *ngIf="post.autor">{{ post.autor }}</td>
+                <td *ngIf="post.foto"><img class="img-sm" [src]="post.foto" alt="post_foto"></td>
+                <td>
+                  <span *ngIf="post.estado" class="label label-success">Activo</span>
+                  <span *ngIf="!post.estado" class="label label-danger">Inactivo</span>
+                </td>
+                <td class="text-left">
+                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-info" (click)="edit(post)"><i class="fa fa-pencil"></i> Editar</button>
+                    <button type="button" class="btn btn-danger" (click)="delete(post)"><i class="fa fa-trash"></i> Eliminar</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+  </div>
+</div>

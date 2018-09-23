@@ -8,6 +8,7 @@ import {
   PostViewComponent
 } from './backoffice.index';
 import { PostComponent } from './posts/post.component';
+import { PostService } from './posts/post.service';
 
 @NgModule({
   imports: [
@@ -19,6 +20,6 @@ import { PostComponent } from './posts/post.component';
     PostViewComponent,
     PostNewComponent,
     PostComponent],
-    providers: [AuthGuard]
+    providers: [AuthGuard, PostService]
 })
 export class BackofficeModule { }

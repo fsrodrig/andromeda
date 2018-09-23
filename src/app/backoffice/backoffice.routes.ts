@@ -12,8 +12,8 @@ const routes: Routes = [
         canActivate: [AuthGuard],
         children: [
             { path: 'posts', component: PostComponent , data: { titulo: 'Posts' } },
-            { path: 'post-new', component: PostNewComponent , data: { titulo: 'Nuevo Post' } },
-            { path: 'post-view', component: PostViewComponent , data: { titulo: 'Ver/Editar Post' } },
+            { path: 'posts/new', component: PostNewComponent , data: { titulo: 'Nuevo Post' } },
+            { path: 'posts/edit/:id', component: PostViewComponent , data: { titulo: 'Ver/Editar Post' } },
             { path: '**', redirectTo: '/back-office/posts', pathMatch: 'full' }
         ]
    },
