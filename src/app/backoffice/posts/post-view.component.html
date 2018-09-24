@@ -1,3 +1,89 @@
-<p>
-  post-view works!
-</p>
+<div class="card mb-3">
+    <div class="card-body">
+      <div class="row">
+        <h2 class="m-3">Posts</h2>
+      </div>
+  
+      <form [formGroup]="form" role="form" ngNativeValidate (ngSubmit)="save()">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group row animated fadeIn">
+              <label class="control-label  col-md-2">Título:</label>
+              <div class="col-md-10">
+                <input formControlName="titulo" name="titulo" type="text" class="form-control form-control-danger"
+                  required>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group row animated fadeIn">
+              <label class="control-label col-md-2">Fecha:</label>
+              <div class="col-md-10">
+                <input formControlName="fecha" name="fecha" type="date" class="form-control form-control-danger" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+                <div class="form-group row animated fadeIn">
+                    <label class="control-label  col-md-2">Autor:</label>
+                    <div class="col-md-10">
+                      <input formControlName="autor" name="autor" type="text" class="form-control form-control-danger" required>
+                    </div>
+                </div>
+                <div class="form-group row animated fadeIn">
+                    <label class="control-label  col-md-2">Estado:</label>
+                    <div class="col-md-10">
+                        <div class="switch">
+                            <label> <small class="label label-danger">Inactivo</small> 
+                                <input formControlName="estado" name="estado" type="checkbox" checked><span class="lever"></span> <small class="label label-success">Activo</small></label>
+                        </div>
+                    </div>
+            </div>
+            
+          </div>
+          <div class="col-md-6">
+            <div class="form-group row animated fadeIn">
+              <label class="control-label  col-md-2">Portada:</label>
+              <div class="col-md-10">
+                <app-img-upload [llamadoPor]="portada" (onUpload)="onUpload($event)">
+                </app-img-upload>
+                <input formControlName="foto" [readonly]="isCargada" name="foto" type="url" class="form-control form-control-danger">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group animated fadeIn">
+              <label class="control-label">Resumen:</label>
+              <div class="">
+                <textarea rows="3" formControlName="resumen" name="resumen" type="text" class="form-control form-control-danger"
+                  required>
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+              
+        <div formControlName="html" [ngxSummernote]="config" [ngxSummernoteDisabled]="editorDisabled"></div>
+            
+        <div class="form-actions">
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="row animated fadeIn">
+                        <div class="col-md-offset-3 col-md-9 btn-group">
+                            <button type="submit" class="btn btn-success" [disabled]="isSaving">
+          <i class="fa fa-check"></i>Guardar</button>
+                            <button type="button" class="btn btn-inverse" (click)="goBack()">Atrás</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6"> </div>
+            </div>
+        </div>
+      </form>
+  
+    </div>
+  </div>

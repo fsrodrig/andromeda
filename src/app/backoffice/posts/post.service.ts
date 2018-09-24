@@ -16,6 +16,16 @@ export class PostService {
     this.postsCol = this.afs.collection('posts', ref => ref.orderBy('fecha'));
    }
 
+  find(id: string): Observable<Post> {
+    return this.afs.doc<Post>('posts/' + id).snapshotChanges().pipe(
+      map(a => {
+        const data = a.payload.data() as Post;
+        const id = a.payload.id;
+        const fecha = a.payload.get('fecha').toDate()
+        return { id, ...data, fecha };
+      }))
+  }
+
   get(): Observable<Post[]> {
     return this.postsCol.snapshotChanges().pipe(
         map(actions => actions.map(a => {

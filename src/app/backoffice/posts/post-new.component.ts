@@ -5,7 +5,6 @@ import { PostService } from './post.service';
 import { DatePipe } from '@angular/common';
 import { Post } from './post.model';
 import { Observable } from 'rxjs';
-import { AngularFireStorage } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-post-new',

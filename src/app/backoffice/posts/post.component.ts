@@ -28,7 +28,6 @@ export class PostComponent implements OnInit {
 	}
 
 	public edit(post: Post) {
-    console.log('post :', post.id);
 		this._router.navigate(['back-office/posts', 'edit', post.id]);
 	}
 
