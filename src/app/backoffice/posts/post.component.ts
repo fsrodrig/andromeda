@@ -69,7 +69,6 @@ export class PostComponent implements OnInit {
                       .then(
 						            () => {
 						            	swal({ title: `Post dado de baja con éxito`, icon: 'success' });
-						            	this.restoreValues();
 						            })
                       .catch((err) =>  console.log('reventó el delete', err))
 				}
@@ -78,15 +77,11 @@ export class PostComponent implements OnInit {
                       .then(
 						            () => {
 						            	swal({ title: `Post eliminado con éxito`, icon: 'success' });
-						            	this.restoreValues();
                         })
                       .catch((err) => console.log('reventó el delete', err))
 				}
 			});
   }
 
-  private restoreValues() {
-    this.posts = this._post.get();
-  }
 
 }

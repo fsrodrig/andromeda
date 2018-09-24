@@ -26,7 +26,7 @@
                 <th scope="row">{{ post.titulo }}</th>
                 <td>{{ post.fecha | date:'dd-MM-yyyy' }}</td>
                 <td *ngIf="post.autor">{{ post.autor }}</td>
-                <td *ngIf="post.foto"><img class="img-sm" [src]="post.foto" alt="post_foto"></td>
+                <td><img *ngIf="post.foto" class="img-sm" [src]="post.foto" alt="post_foto"></td>
                 <td>
                   <span *ngIf="post.estado" class="label label-success">Activo</span>
                   <span *ngIf="!post.estado" class="label label-danger">Inactivo</span>
