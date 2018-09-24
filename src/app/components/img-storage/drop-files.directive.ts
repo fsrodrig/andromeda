@@ -72,8 +72,6 @@ export class DropFilesDirective {
 
         }
 
-        console.log(this.archivos);
-
     }
 
     private _prevenirYdetener(event: any) {
