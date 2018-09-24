@@ -30,7 +30,7 @@ export class ImgUploadComponent {
 
     cargarImagenesFirebase() {
         this.permiteCargar = false;
-        this._cargaImagenes.cargar_imagenes_firebase(this.archivos, this.llamadoPor).subscribe(
+        this._cargaImagenes.cargar_imagenes_firebase(this.archivos, this.llamadoPor).then(
             (value) => {
                 console.log('url :', value);
                 this.isCargada = true;
