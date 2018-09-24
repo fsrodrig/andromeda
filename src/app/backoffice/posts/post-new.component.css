@@ -1,0 +1,31 @@
+/* Drop Zone */
+#img-upload .drop-zone {
+    border: dotted 3px lightgray;
+    opacity: 0.5;
+    color: #666;
+    text-align: center
+}
+
+#img-upload .file-over {
+    border: dotted 3px dodgerblue;
+}
+
+#img-upload .text-green {
+    color: green
+}
+
+#img-upload .upload {
+    width: 200px;
+    height: 200px;
+}
+
+#img-upload .table td.text {
+    max-width: 177px;
+}
+#img-upload .table td.text span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
+}

@@ -46,11 +46,10 @@ export class ImgUploadService {
 
                 uploadTask.snapshotChanges().pipe(
                         finalize(
-                            () => ( url = fileRef.getDownloadURL())
+                            () => ( archivo.url = fileRef.getDownloadURL()) 
                         )
-                    )
-
-                return url;
+                    ).subscribe()
+                return archivo.url;                
             }
     }
    /* eliminar_imagenes_firebase(, llamadoPor: string) {

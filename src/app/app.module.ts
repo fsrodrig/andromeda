@@ -24,7 +24,8 @@ import { BackofficeModule } from './backoffice/backoffice.module';
   declarations: [
     AppComponent,
     NopagefoundComponent,
-    LoginComponent
+    LoginComponent,
+
   ],
   imports: [
     APP_ROUTES,

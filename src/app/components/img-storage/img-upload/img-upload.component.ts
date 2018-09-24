@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {FileItem} from '../file-item.model';
 import {ImgUploadService} from '../imgUpload.service';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-img-upload',
@@ -12,7 +13,7 @@ import {ImgUploadService} from '../imgUpload.service';
 export class ImgUploadComponent {
 
     @Input() llamadoPor: string;
-    @Output() onUpload = new EventEmitter<string>();
+    @Output() onUpload = new EventEmitter<Observable<string>>();
 
     estaSobreDropZone = false;
     permiteCargar = true;
@@ -33,14 +34,14 @@ export class ImgUploadComponent {
             (value) => {
                 console.log('url :', value);
                 this.isCargada = true;
-                this.onUpload.emit(value);
+                this.onUpload.emit(this.archivos[0].url);
             });
     }
 
     limpiarArchivos() {
         this.isCargada = false;
         // this._cargaImagenes.eliminar_imagenes_firebase
-        this.onUpload.emit('');
+        this.onUpload.emit(null);
         this.archivos = [];
         this.permiteCargar = true;
     }

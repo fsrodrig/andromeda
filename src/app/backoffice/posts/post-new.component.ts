@@ -4,10 +4,15 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { PostService } from './post.service';
 import { DatePipe } from '@angular/common';
 import { Post } from './post.model';
+import { Observable } from 'rxjs';
+import { FileItem } from '../../components/img-storage/file-item.model';
+import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-post-new',
-  templateUrl: './post-new.component.html'
+  templateUrl: './post-new.component.html',
+  styleUrls: ['./post-new.component.css']
 })
 export class PostNewComponent {
 
@@ -40,7 +45,8 @@ export class PostNewComponent {
   constructor(
     private sanitizer: DomSanitizer,
     public datePipe: DatePipe,
-    private _post: PostService
+    private _post: PostService,
+    private storage: AngularFireStorage
   ) {
     this.form = new FormGroup({
       titulo: new FormControl(null, Validators.required),
@@ -59,12 +65,13 @@ export class PostNewComponent {
       const post: Post = {
         titulo: this.form.value.titulo,
         autor:this.form.value.autor,
-        fecha:this.form.value.fecha,
+        fecha: new Date(this.form.value.fecha),
         foto:this.form.value.foto,
         contenido: this.form.value.html,
         estado: this.form.value.estado,
         resumen: this.form.value.resumen
       }
+
       this._post.add(post)
                   .then(
                     () => {
@@ -86,8 +93,57 @@ export class PostNewComponent {
     window.history.back();
   }
 
-  onUpload(archivoUrl: string) {
+  onUpload(archivoUrl: Observable<string>) {
     this.form.controls.foto.setValue(archivoUrl);
   }
+
+  // Carga de imagenes
+
+  estaSobreDropZone = false;
+  permiteCargar = true;
+  isCargada = false;
+  uploadPercent: Observable<number>;
+  downloadURL: Observable<string>;
+  archivos: FileItem[] = [];
+  private CARPETA_IMAGENES = 'img/posts';
+
+
+  cargarImagenesFirebase() {
+    this.permiteCargar = false;
+    for (let archivo of this.archivos) {
+
+      archivo.estaSubiendo = true;
+      
+      let path = `${ this.CARPETA_IMAGENES }/${ archivo.nombreArchivo }`;
+
+      let fileRef = this.storage.ref(path);
+      let uploadTask: AngularFireUploadTask  = this.storage.upload(path, archivo.archivo);
+
+      uploadTask.percentageChanges().subscribe((num) => archivo.progreso = num);
+
+      uploadTask.snapshotChanges().pipe(
+              finalize(
+                  () => { 
+                    archivo.url = fileRef.getDownloadURL();
+                    fileRef.getDownloadURL().subscribe( (v) => {
+                      this.form.controls.foto.setValue(v);
+                      this.isCargada =true;
+                    });
+                  }
+              )
+          ).subscribe()
+      }
+  }
+
+  archivoSobreDropZone(e: boolean) {
+    this.estaSobreDropZone = e;
+  }
+
+  limpiarArchivos() {
+    this.isCargada = false;
+    this.archivos = [];
+    this.permiteCargar = true;
+}
+
 
 }

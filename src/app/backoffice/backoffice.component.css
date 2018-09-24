@@ -38,3 +38,7 @@
   	overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
   }
+
+  #img-upload .main-container{
+    margin-top: 40px;
+}

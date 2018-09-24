@@ -4,7 +4,7 @@ export class FileItem {
 
   public archivo: File;
   public nombreArchivo: string;
-  public url = '';
+  public url: Observable<string>;
   public estaSubiendo = true;
   public progreso = 0;
 
