@@ -23,9 +23,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/animate.css",
+              "node_modules/summernote/dist/summernote-lite.css"
             ],
-            "scripts": []
+            "scripts": [
+	            "node_modules/summernote/dist/summernote-lite.js"
+            ]
           },
           "configurations": {
             "production": {

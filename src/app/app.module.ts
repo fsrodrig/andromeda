@@ -5,6 +5,7 @@ import { PublicModule } from './public/public.module';
 import { AngularFireModule } from '@angular/fire';
 import { CoreModule } from './core/core.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 
 
 import { environment } from '../environments/environment';
@@ -35,7 +36,7 @@ import { BackofficeModule } from './backoffice/backoffice.module';
     CoreModule,
     BackofficeModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

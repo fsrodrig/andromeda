@@ -5,7 +5,8 @@ export interface Post {
         fecha: Date,
         foto?: string,
         contenido: string,
-        estado: boolean // true = activo
+        estado: boolean, // true = activo
+        resumen: string
 }
 
 // export interface Author {

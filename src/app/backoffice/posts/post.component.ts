@@ -21,9 +21,6 @@ export class PostComponent implements OnInit {
   ngOnInit() {
 
     this.posts = this._post.get();
-    // this._post.get().subscribe(
-    //   (res) => this.posts = res
-    // );
   }
 
   public create() {

@@ -24,7 +24,9 @@
     "@nicky-lenaers/ngx-scroll-to": "^1.1.1",
     "core-js": "^2.5.4",
     "firebase": "^5.5.0",
+    "ngx-summernote": "^0.5.5",
     "rxjs": "^6.0.0",
+    "summernote": "^0.8.10",
     "sweetalert": "^2.1.0",
     "zone.js": "~0.8.26"
   },

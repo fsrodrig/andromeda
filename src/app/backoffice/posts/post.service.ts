@@ -42,7 +42,7 @@ export class PostService {
   }
 
   add(post: Post) {
-    this.postsCol.add(post);
+    return this.postsCol.add(post);
   }
 
   update(post: Post) {

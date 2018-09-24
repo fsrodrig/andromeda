@@ -9,17 +9,33 @@ import {
 } from './backoffice.index';
 import { PostComponent } from './posts/post.component';
 import { PostService } from './posts/post.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxSummernoteModule } from 'ngx-summernote';
+import { ImgUploadComponent, ImgUploadService } from '../components/components.index';
+import { DropFilesDirective } from '../components/img-storage/drop-files.directive';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+
 
 @NgModule({
   imports: [
     CommonModule,
-    BACKOFFICE_ROUTES
+    BACKOFFICE_ROUTES,
+    ReactiveFormsModule,
+    NgxSummernoteModule,
+    AngularFireStorageModule
   ],
   declarations: [
     BackofficeComponent, 
     PostViewComponent,
     PostNewComponent,
-    PostComponent],
-    providers: [AuthGuard, PostService]
+    PostComponent,
+    ImgUploadComponent,
+    DropFilesDirective
+  ],
+    providers: [
+      AuthGuard,
+      PostService,
+      ImgUploadService
+  ]
 })
 export class BackofficeModule { }
