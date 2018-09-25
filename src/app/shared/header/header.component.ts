@@ -27,7 +27,7 @@ export class HeaderComponent implements OnChanges {
   }
 
   goTo(seccion: string) {
-    this._router.navigate(['/home'], {fragment: seccion});
+    this._router.navigate(['/home']);
   }
 
   @HostListener("window:scroll", [])

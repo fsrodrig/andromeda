@@ -1,0 +1,27 @@
+<div id="post" class="container">
+  <div class="card animated fadeIn" *ngIf="post">
+    <div class="post-header-container">
+      <img class="card-img" [src]="post.foto" alt="foto del post">
+      <div class="card-img-overlay text-white">
+        <h2>{{ post.titulo }}</h2>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <div class="row">
+            <footer class="col blockquote-footer">
+                    <span class="text-muted">
+                      Escrito por <cite [title]="post.titulo" class="text-andromeda">{{ post.autor }}</cite>
+                    </span>
+                  </footer>
+                  <div class="col card-text text-right">
+                    <span class="text-muted">{{ post.fecha | date: 'longDate' }}</span>
+                  </div>
+      </div>
+    </div>
+    <div class="container card-body" [ngxSummernoteView]="post.contenido"></div>
+  </div>
+  <div class="btn-volver">
+    <a href="#" (click)="goBack()" class="btn-more-info">Volver</a>
+  </div>
+</div>

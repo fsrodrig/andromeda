@@ -44,8 +44,9 @@ export class PostService {
     return postsCol.snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as Post;
+        const id = a.payload.doc.id;
         const fecha = a.payload.doc.get('fecha').toDate()
-        return { ...data, fecha };
+        return { ...data, fecha, id };
       }))
     );
 

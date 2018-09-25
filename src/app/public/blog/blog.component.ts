@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-declare function init_plugins();
+import { PostService } from '../../backoffice/posts/post.service';
+import { Observable } from 'rxjs';
+import { Post } from '../../backoffice/posts/post.model';
 
 @Component({
   selector: 'app-blog',
@@ -9,11 +10,15 @@ declare function init_plugins();
 })
 export class BlogComponent implements OnInit {
 
-  constructor() {
-    // init_plugins();
-   }
+  posts: Observable<Post[]>
+  
+  constructor(
+    private _posts: PostService
+  ) {}
 
-  ngOnInit() {
+  ngOnInit( ) {
+    window.scrollTo(0,0);
+    this.posts = this._posts.getActive();
   }
 
 }

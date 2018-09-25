@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
+import { NgxSummernoteModule } from 'ngx-summernote';
 
 // Rutas
 import { PUBLIC_ROUTES } from './public.routes';
@@ -10,14 +11,16 @@ import { PUBLIC_ROUTES } from './public.routes';
 import { PublicComponent } from './public.component';
 import {
     HomeComponent,
-    BlogComponent
+    BlogComponent,
+    PublicPostComponent
 } from './public.index';
 
 @NgModule({
    declarations: [
       PublicComponent,
       HomeComponent,
-      BlogComponent
+      BlogComponent,
+      PublicPostComponent
    ],
    exports: [
       PublicComponent
@@ -25,7 +28,8 @@ import {
    imports: [
       PUBLIC_ROUTES,
       CommonModule,
-      SharedModule
+      SharedModule,
+      NgxSummernoteModule
    ]
 })
 export class PublicModule { }

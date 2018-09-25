@@ -1,12 +1,15 @@
 // MODULOS
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { PublicModule } from './public/public.module';
 import { AngularFireModule } from '@angular/fire';
 import { CoreModule } from './core/core.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { DatePipe } from '@angular/common';
-
+import { DatePipe, registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es-AR';
+import localeEsExtra from '@angular/common/locales/extra/es-AR';
+// Registro idioma español
+registerLocaleData(localeEs, 'es-AR', localeEsExtra);
 
 import { environment } from '../environments/environment';
 
@@ -20,12 +23,13 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './core/auth.guard';
 import { BackofficeModule } from './backoffice/backoffice.module';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     NopagefoundComponent,
-    LoginComponent,
-
+    LoginComponent
   ],
   imports: [
     APP_ROUTES,
@@ -35,9 +39,9 @@ import { BackofficeModule } from './backoffice/backoffice.module';
     PublicModule,
     AngularFireModule.initializeApp(environment.firebase),
     CoreModule,
-    BackofficeModule
+    BackofficeModule,
   ],
-  providers: [AuthGuard, DatePipe],
+  providers: [AuthGuard, DatePipe, { provide: LOCALE_ID, useValue: "es-AR" }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
