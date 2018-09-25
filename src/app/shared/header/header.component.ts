@@ -33,10 +33,10 @@ export class HeaderComponent implements OnChanges {
   @HostListener("window:scroll", [])
   onWindowScroll() {
     const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (number > 0) {
-      this.showIsologo = false;
-    } else {
+    if (number === 0 && !this.getRoute()) {
       this.showIsologo = true;
+    } else {
+      this.showIsologo = false;
     }
   }
 
