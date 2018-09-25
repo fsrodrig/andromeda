@@ -515,6 +515,8 @@ app-header.mobile-nav-active #mobile-nav-toggle {
   margin: 10px;
   border: 2px solid #ed2a5c;
   color: #ed2a5c;
+  cursor: pointer;
+  background: #fff
 }
 
 .btn-more-info:hover {
@@ -1026,6 +1028,36 @@ app-header.mobile-nav-active #mobile-nav-toggle {
   background: #51d8ad;
 }
 
+.btn-outline-primary {
+  color: #ed2a5c;
+  background-color: transparent;
+  background-image: none;
+  border-color: #ed2a5c;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #ed2a5c;
+  border-color: #ed2a5c;
+}
+
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+  color: #ed2a5c;
+  background-color: transparent;
+}
+
+.btn-outline-primary:not([disabled]):not(.disabled):active, .btn-outline-primary:not([disabled]):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #ed2a5c;
+  border-color: #ed2a5c;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -1299,6 +1331,15 @@ html body .waves-notransition {
   color: #fff;
 }
 
+/* .contacto {
+  margin-top: 50px;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=3);
+} */
+
 /* ========================================
   Switch  
 ========================================== */
@@ -1449,15 +1490,11 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::after {
   z-index: 3;
 }
 
-#post .card-img {
-  z-index: -999;
-}
 
 #post h2 {
   color: #fff;
   font-size: 28px;
   font-weight: 700;
-  z-index: 5;
 }
 
 @media (max-width: 768px) {

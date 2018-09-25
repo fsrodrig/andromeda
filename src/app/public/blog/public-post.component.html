@@ -7,21 +7,22 @@
       </div>
     </div>
 
-    <div class="card-footer">
-      <div class="row">
-            <footer class="col blockquote-footer">
-                    <span class="text-muted">
-                      Escrito por <cite [title]="post.titulo" class="text-andromeda">{{ post.autor }}</cite>
-                    </span>
-                  </footer>
-                  <div class="col card-text text-right">
-                    <span class="text-muted">{{ post.fecha | date: 'longDate' }}</span>
-                  </div>
+      <div class="card-footer">
+        <div class="row">
+              <footer class="col blockquote-footer">
+                      <span class="text-muted">
+                        Escrito por <cite [title]="post.titulo" class="text-andromeda">{{ post.autor }}</cite>
+                      </span>
+                    </footer>
+                    <div class="col card-text text-right">
+                      <span class="text-muted">{{ post.fecha | date: 'longDate' }}</span>
+                    </div>
+        </div>
+      </div>
+
+      <div class="container card-body" [ngxSummernoteView]="post.contenido"></div>
+      <div class="btn-volver">
+        <button type="button" (click)="goBack()" class="btn btn-more-info">Volver</button>
       </div>
     </div>
-    <div class="container card-body" [ngxSummernoteView]="post.contenido"></div>
-  </div>
-  <div class="btn-volver">
-    <a href="#" (click)="goBack()" class="btn-more-info">Volver</a>
-  </div>
 </div>

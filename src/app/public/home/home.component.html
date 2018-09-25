@@ -3,9 +3,14 @@
   ============================-->
   <!-- <div class="icon-bar"> -->
   <div class="icon-bar" [ngClass]="{'hide': showSocialBar, 'show': !showSocialBar}">
-    <a href="https://www.instagram.com/andromeda_agencia" target="_blank" class="instagram">
+    <a href="https://www.instagram.com/andromeda_agencia" target="_blank"
+    data-toggle="tooltip" data-placement="left" title="Instagram"
+    class="instagram">
       <i class="fa fa-instagram"></i>
-    </a> 
+    </a>
+    <a href="#contact" data-toggle="tooltip" data-placement="left" title="Contacto" class="contacto">
+      <i class="fa fa-mail-forward"></i>
+    </a>  
     <!-- <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
     <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
     <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a> -->
@@ -319,35 +324,27 @@
 
         <div class="col-lg-5 col-md-8">
           <div class="form">
-            <div id="sendmessage">Your message has been sent. Thank you!</div>
-            <div id="errormessage"></div>
-            <form action="" method="post" role="form" class="contactForm">
+            <form action="https://formspree.io/info@andromedaagencia.com" method="POST" role="form" class="contactForm">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Tu Nombre" data-rule="minlen:4"
-                  data-msg="Please enter at least 4 chars" />
-                <div class="validation"></div>
+                <input type="text" name="nombre" class="form-control" id="name" placeholder="Tu Nombre" required minlength="4"/>
               </div>
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Tu Empresa" data-rule="minlen:4"
-                  data-msg="Please enter at least 4 chars" />
-                <div class="validation"></div>
+                <input type="text" name="empresa" class="form-control" id="company" placeholder="Tu Empresa" required minlength="4" />
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Tu Email" data-rule="email"
-                  data-msg="Please enter a valid email" />
-                <div class="validation"></div>
+                <input type="email" class="form-control" name="_replyto" id="email" placeholder="Tu Email" required />
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4"
-                  data-msg="Please enter at least 8 chars of subject" />
-                <div class="validation"></div>
+                <input type="text" class="form-control" name="asunto" id="subject" placeholder="Asunto" />
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Envianos tu consulta..."
-                  placeholder="Message"></textarea>
-                <div class="validation"></div>
+                <textarea class="form-control" name="mensaje" rows="5" required placeholder="Envianos tu consulta..."></textarea>
               </div>
-              <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
+              <input type="hidden" name="_language" value="es" />
+
+              <div class="text-center">
+                  <input class="btn btn-outline-primary" type="submit" value="Enviar">
+              </div>
             </form>
           </div>
         </div>
