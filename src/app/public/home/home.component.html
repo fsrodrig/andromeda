@@ -48,7 +48,7 @@
           </p>
 
           <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-            <a href="#services" class="btn-more-info">Querés saber más</a>
+            <a data-toggle="modal" data-target="#responsive-modal-inbound" class="btn-more-info">Querés saber más</a>
           </div>
 
         </div>
@@ -130,7 +130,7 @@
       </div>
       <div class="row">
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-          <div class="box">
+          <div class="box" data-toggle="modal" data-target="#responsive-modal-serv-plan-marketing">
             <div class="icon icon-service"><img src="../../../assets/img/servicios/1.PlandeMktDigital.svg" alt=""></div>
             <h4 class="title"><a href="">PLAN DE MARKETING DIGITAL TURÍSTICO</a></h4>
             <p class="description">Analizamos tu negocio, productos, a tu buyer persona y a la competencia para generar
@@ -139,7 +139,7 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-          <div class="box">
+          <div class="box"  data-toggle="modal" data-target="#responsive-modal-serv-contenidos-digitales">
             <div class="icon icon-service"><img src="../../../assets/img/servicios/2.ContenidosDigitales.svg" alt=""></div>
             <h4 class="title"><a href="">CONTENIDOS DIGITALES</a></h4>
             <p class="description">El contenido que elaboramos es producido por nosotros exclusivamente para tu empresa
@@ -148,7 +148,7 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-          <div class="box">
+          <div class="box"  data-toggle="modal" data-target="#responsive-modal-serv-redes-sociales">
             <div class="icon icon-service"><img src="../../../assets/img/servicios/3.redesSociales.svg" alt=""></div>
             <h4 class="title"><a href="">REDES SOCIALES</a></h4>
             <p class="description">Andrómeda ayudará a tu marca a identificar a tus posibles clientes, qué están
@@ -157,7 +157,7 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-          <div class="box">
+          <div class="box"  data-toggle="modal" data-target="#responsive-modal-serv-analisis-resultados">
             <div class="icon icon-service"><img src="../../../assets/img/servicios/4.AnalisisdeResultados.svg" alt=""></div>
             <h4 class="title"><a href="">ANÁLISIS DE RESULTADOS</a></h4>
             <p class="description">El análisis de resultados en una de las partes más importantes del
@@ -168,7 +168,7 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-          <div class="box">
+          <div class="box"  data-toggle="modal" data-target="#responsive-modal-serv-reputacion">
             <div class="icon icon-service"><img src="../../../assets/img/servicios/5.RepOnLine.svg" alt=""></div>
             <h4 class="title"><a href="">REPUTACION ON LINE</a></h4>
             <p class="description">Contamos con claves para gestionar tu reputación, escuchar qué están diciendo de tu
@@ -178,10 +178,10 @@
         </div>
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
           <div class="box">
+          <!-- <div class="box"  data-toggle="modal" data-target="#responsive-modal-serv-desarrollo-web"> -->
             <div class="icon icon-service"><img src="../../../assets/img/servicios/6.DesWeb.svg" alt=""></div>
             <h4 class="title"><a href="">DESARROLLO WEB</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
-              soluta nobis est eligendi</p>
+            <p class="description">Además, te ofrecemos un sistema para gestionar tu web con total libertad!</p>
           </div>
         </div>
       </div>
@@ -215,7 +215,7 @@
   <section id="team" #team name="team">
     <div class="container wow fadeInUp">
       <div class="section-header">
-        <h3 class="section-title">Nosotros</h3>
+        <h3 class="section-title" style="cursor: pointer;" data-toggle="modal" data-target="#responsive-modal-nosotros">Nosotros</h3>
         <p class="section-description">Te presentamos nuestro equipo.</p>
       </div>
       <div class="row">
@@ -313,11 +313,11 @@
           </div>
 
           <div class="social-links">
-            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <!-- <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> -->
+            <a href="https://www.instagram.com/andromeda_agencia" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a>
+            <!-- <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a> -->
           </div>
 
         </div>
@@ -355,3 +355,182 @@
   </section><!-- #contact -->
 
 </main>
+
+<div id="responsive-modal-inbound" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title">Inbound Marketing</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </div>
+          <div class="modal-body">
+              <p>Para Andrómeda el Inbound Marketing más que un concepto es nuestra filosofía de trabajo. </p>
+              <p>El Inbound es una metodología no invasiva de marketing que se centra en crear contenido relevante aportando un valor añadido a los clientes actuales y potenciales con el principal objetivo de conseguir que sean ellos los que nos encuentren y den la iniciativa.</p>
+              <p>Las principales acciones que se abarcan son: posicionamiento SEO, marketing de contenido, difusión en redes sociales y estudio de los datos de tu página web.</p>
+              <p>Las estrategias Inbound te ayudaran a mejorar tu visibilidad y reputación online, transformando a los usuarios en leads interesados, luego en clientes y finalmente en fieles embajadores de tu marca. En esta captación es imprescindible contar con una herramienta de automatización para trabajar con técnicas de marketing no intrusivas, conociendo a tu buyer persona, brindándoles el valor y contenido que ellos están buscando.</p>
+              <p>El Inbound Marketing se puede resumir en cuatro palabras: crear, optimizar, dinamizar y convertir.</p>
+              <p><b>En Conclusión</b></p>
+              <p>El Inbound Marketing busca atraer clientes desconocidos para que visiten tu web, generando tráfico, luego convertirlos en suscriptores o leads, para que después de una estrategia de marketing turística de contenido de calidad y difusión en redes sociales puedas convertirlos en fieles seguidores que te elijan y te recomienden. Y para hacer todo eso estamos nosotras. No es genial??!!!</p>
+          </div>
+          <div class="modal-footer">
+              
+          </div>
+      </div>
+  </div>
+</div>
+
+<div id="responsive-modal-serv-plan-marketing" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title">Plan de Marketing Digital Turístico</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </div>
+          <div class="modal-body">
+            <p style="text-transform: uppercase;">Situación Actual</p>
+            <p>Definimos tu negocio, tu nicho, marca y producto o servicio. Somos inalcanzablemente y densas perfeccionistas y detallistas, por ello es que nos gusta saber todo, lo que hiciste antes, lo que lograste, lo que te encantó y decepcionó.</p>
+            <p style="text-transform: uppercase;">Analizamos la Competencia</p>
+            <p>Estudiamos con profundidad el mercado para luego planificar la estrategia correcta para tu marca.</p>
+            <p style="text-transform: uppercase;">Estudiamos a tu Buyer Persona</p>
+            <p>Sabías que tu público objetivo no está segmentado por edad y nacionalidad, sino que va más allá. Tu Buyer Persona es aquel que identificamos por medio de intereses, objetivos, retos y necesidades. Es así que llegamos a ellos brindándoles lo que realmente necesitan y no lo que tú quieres vender de forma invasiva. Le decimos chau al viejo marketing y publicidad. </p>
+            <p style="text-transform: uppercase;">Generamos Estrategias y Objetivos</p>
+            <p>Creamos una propuesto única de venta a corto, mediano y largo plazo (smart goals).</p>
+            <p style="text-transform: uppercase;">Analizamos los Resultados</p>
+            <p style="text-transform: uppercase;">Qué son Objetivos Smart Goals ¿?</p>
+            <ul>
+              <li>Specif (Específicos)</li>
+              <li>Measurable (Medible)</li>
+              <li>Attainable (Alcanzable)</li>
+              <li>Realistic (Realista)</li>
+              <li>Time-Bound (En un Tiempo Limitado)</li>
+            </ul>
+            <p></p>
+          </div>
+          <div class="modal-footer">
+              
+          </div>
+      </div>
+  </div>
+</div>
+
+<div id="responsive-modal-serv-contenidos-digitales" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title">Contenidos Digitales</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </div>
+          <div class="modal-body">
+            <p>Diseñamos y generamos contenidos reales para tu marca. No nos gustan las imágenes compradas, por eso el contenido es producido por nosotros exclusivamente para tu empresa, permitiendo la conexión con tus clientes, en primera persona sin que medie una campaña estrictamente publicitaria.</p>
+            <p>Qué hacemos: Branded content, videos, fotos, textos, emails, ebooks, infografía, blogs, y mucho más que vas a sorprenderte.</p>
+            <p>Cómo lo hacemos: creamos fotos únicas de tus espacios con fotógrafos profesionales, videos cortos e impactantes, infografías para resumir de forma eficaz el contenido que necesitas contar, mails que aumentan, fidelizan o captan nuevos clientes. Todo esto, no solo para una red social, sino para todas aquellas en donde tu cliente este, con formatos fácilmente legibles, descargables y visibles.</p>
+          </div>
+          <div class="modal-footer">
+              
+          </div>
+      </div>
+  </div>
+</div>
+
+<div id="responsive-modal-serv-redes-sociales" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title">Redes Sociales</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </div>
+          <div class="modal-body">
+            <p>Estar y publicar información en las redes sociales es fácil. Ser único, diferente y que tu contenido sea el que la persona quiera compartir, vivir y contactarse con vos es lo difícil.</p>
+            <p>Por eso es que nos gusta contar la experiencia que una persona puede vivir con tu empresa, con la pasión con la que vos la creaste.</p>
+            <p>Para ello nuestra “social manager” investiga, vive y conoce tu marca, así como a la competencia. </p>
+            <p>Una vez que definimos los objetivos específicos de tu marca, e identificamos a la buyer persona, nos vamos a las redes sociales y es momento de publicar los contenidos, pero no cualquiera.</p>
+            <p>A la hora de generar el contenido creamos una agenda de publicaciones para distribuirlo por secciones o categorías y formatos (videos, fotos, textos, etc.). </p>
+            <p>Con este proceso, generamos conversaciones, leads a tu página web, base de datos de futuros clientes, y ¡ventas!</p>
+            <p>Por ello es que consideramos fundamental la inversión en social media como herramienta de comercialización. La segmentación que allí se puede hacer es superponte lo que nos permite realizar campañas con un presupuesto bajo y un alcance increíble que puede medirse de manera efectiva. </p>
+          </div>
+          <div class="modal-footer">
+              
+          </div>
+      </div>
+  </div>
+</div>
+
+<div id="responsive-modal-serv-analisis-resultados" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title">Análisis de Resultados</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </div>
+          <div class="modal-body">
+            <p>El análisis de resultados en una de las partes más importantes del marketing por dos razones. Por un lado lograrás saber si la inversión que realmente estás haciendo tiene retorno y es rentable. Por el otro, sabrás si se están cumpliendo los objetivos planteados en un comienzo para continuar por ese mismo camino o redireccionar y modificar las estrategias para lograr los objetivos.</p>
+          </div>
+          <div class="modal-footer">
+              
+          </div>
+      </div>
+  </div>
+</div>
+
+<div id="responsive-modal-serv-reputacion" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title">Reputación On Line</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </div>
+          <div class="modal-body">
+             <p>El sector del turismo es muy sensible, por ello la reputación on line en el rubro es fundamental, no es una opción sino una necesidad para desarrollar con éxito tu marca en el ámbito digital. </p>
+             <p>Cualquier persona puede opinar sobre tu negocio, desde su smartphone, poniendo una reseña en Google, tus redes sociales o páginas de turismo como TripAdvisor, Booking, o cualquier otro espacio pudiendo perjudicar tu reputación on line.</p>
+             <p>Nosotras contamos con claves para gestionar tu reputación, escuchar qué están diciendo de tu marca, controlar los que otros hablan y nos anticipamos de manera eficiente ante una eventual crisis antes de que esa “opinión” continúe siendo un inconveniente mayor para tu empresa. </p>
+             <p>Con este objetivo es que nos involucramos, charlamos, respondemos y cuidamos tu marca en el maravilloso y enorme mundo de Internet. </p>
+              
+          </div>
+          <div class="modal-footer">
+              
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- <div id="responsive-modal-serv-desarrollo-web" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Desarrollo Web</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </div>
+          <div class="modal-body">
+             <p>El sector del turismo es muy sensible, por ello la reputación on line en el rubro es fundamental, no es una opción sino una necesidad para desarrollar con éxito tu marca en el ámbito digital. </p>
+             <p>Cualquier persona puede opinar sobre tu negocio, desde su smartphone, poniendo una reseña en Google, tus redes sociales o páginas de turismo como TripAdvisor, Booking, o cualquier otro espacio pudiendo perjudicar tu reputación on line.</p>
+             <p>Nosotras contamos con claves para gestionar tu reputación, escuchar qué están diciendo de tu marca, controlar los que otros hablan y nos anticipamos de manera eficiente ante una eventual crisis antes de que esa “opinión” continúe siendo un inconveniente mayor para tu empresa. </p>
+             <p>Con este objetivo es que nos involucramos, charlamos, respondemos y cuidamos tu marca en el maravilloso y enorme mundo de Internet. </p>
+              
+          </div>
+          <div class="modal-footer">
+          </div>
+      </div>
+    </div>
+</div> -->
+
+<div id="responsive-modal-nosotros" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title">Nosotros</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </div>
+          <div class="modal-body">
+            <p>Somos Andrómeda, amigas, emprendedoras y guerreras. Una galaxia de brillantes y nuevas ideas que siempre está en constante movimiento. </p>
+            <p>Porque creemos que las personas tenemos esa capacidad innata de emocionarnos es que buscamos humanizar el marketing turístico mediante estrategias de neuroturismo e inbound marketing. </p>
+            <p>Y… ¿esto cómo lo hacemos? Elaboramos contenidos enfocados a conquistar a tus clientes para que sean ellos los que te elijan a vos, transformándose en verdaderos embajadores de tu marca. Para ello contamos historias (storytelling), ¡algo que nos sale muy bien!, les damos experiencias consistentes, reales, auténticas y originales para atraerlos a tu marca.</p>
+            <p>Estamos convencidas de que las plataformas sociales y el contenido de calidad real son una fuente inagotable de inspiración para llegar a las emociones de los viajeros, y ahí es donde queremos estar con tu marca.</p>
+            <p>Somos conscientes que la planificación de un viaje y la decisión de elegir la habitación de un hotel, optar por una excursión, seleccionar un restaurante no se da en el momento en que el turista llega a la ciudad, sino mucho antes desde su computadora y sobre todo desde su celular. Así es que nosotros buscamos que en esos momentos, TÚ marca este ahí, con una estrategia y contenido que seduzca a esa persona a elegir TÚ marca por sobre la competencia. </p>
+
+          </div>
+          <div class="modal-footer">
+              
+          </div>
+      </div>
+  </div>
+</div>
