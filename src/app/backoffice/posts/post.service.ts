@@ -40,7 +40,7 @@ export class PostService {
   getActive(): Observable<Post[]> {
     let postsCol: AngularFirestoreCollection<Post>;
     postsCol = this.afs.collection('posts', ref => ref.where('estado', "==", true)
-                                                      .orderBy('fecha'));
+                                                      .orderBy('fecha', 'desc'));
     return postsCol.snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as Post;
