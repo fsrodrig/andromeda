@@ -830,7 +830,7 @@ app-header.mobile-nav-active #mobile-nav-toggle {
 
 #portfolio .portfolio-item {
   position: relative;
-  height: 200px;
+  height: 300px;
   overflow: hidden !important;
   margin-bottom: 15px;
   transition: all 350ms ease;
@@ -846,6 +846,7 @@ app-header.mobile-nav-active #mobile-nav-toggle {
   position: relative;
   top: 0;
   transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 250px;
 }
 
 #portfolio .portfolio-item .details {
@@ -899,8 +900,50 @@ app-header.mobile-nav-active #mobile-nav-toggle {
   height: 260px;
 }
 
+#team .member .pic:hover .cover{
+  position: absolute;
+  bottom: 31%;
+  background: rgba(255, 255, 255, 0.8);
+  width: 251px;
+  left: 64px;
+  height: 260px;
+}
+
+#team .member .pic:hover .cover p{
+  margin-top: 150px;
+  color:#ed2a5c;
+  font-size: 0.8rem;
+}
+
 #team .member .pic img {
   max-width: 100%;
+  width: 250px;
+}
+
+#team .member .pic2 {
+  margin-bottom: 15px;
+  overflow: hidden;
+  width: 390px;
+  height: 260px;
+}
+
+#team .member .pic2:hover .cover2{
+  position: absolute;
+  bottom: 31%;
+  background: rgba(255, 255, 255, 0.8);
+  width: 350px;
+  height: 260px;
+}
+
+#team .member .pic2:hover .cover2 p{
+  margin-top: 150px;
+  color:#ed2a5c;
+  font-size: 0.8rem;
+}
+
+#team .member .pic2 img {
+  max-width: 100%;
+  width: 390px;
 }
 
 #team .member h4 {
