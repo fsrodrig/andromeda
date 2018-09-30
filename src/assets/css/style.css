@@ -533,7 +533,7 @@ app-header.mobile-nav-active #mobile-nav-toggle {
 #inbound .inbound-container .background {
   min-height: 500px;
   background-size: cover;
-  background: url(../img/inbound-img.png) center top no-repeat;
+  background: url(../img/inbound.jpg) center top no-repeat;
   margin-bottom: 10px;
 }
 
@@ -576,7 +576,7 @@ app-header.mobile-nav-active #mobile-nav-toggle {
 
 #neuroturism .neuroturism-container .background {
   min-height: 300px;
-  background: url(../img/inbound-img.png) center top no-repeat;
+  background: url(../img/neuromarketing.jpg) center top no-repeat;
   margin-bottom: 10px;
 }
 
@@ -659,6 +659,21 @@ app-header.mobile-nav-active #mobile-nav-toggle {
   margin: 0 0 20px 0;
   font-family: "Aller", sans-serif;
   font-size: 14px;
+}
+
+#facts .cli-img {
+  height: 8rem;
+  width: 8rem;
+  margin: 10px;
+}
+
+#facts row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
 }
 
 /* Services Section
@@ -1567,3 +1582,4 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::after {
   display: flex;
   justify-content: center;
 }
+
