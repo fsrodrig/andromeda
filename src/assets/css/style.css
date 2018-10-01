@@ -943,6 +943,56 @@ app-header.mobile-nav-active #mobile-nav-toggle {
   width: 250px;
 }
 
+/* para 4 fotos por columna */
+
+#team .member .pic3 img.jpe {
+  width: 300px;
+  max-width: 300px;
+}
+
+@media (max-width: 450px) {
+  #team .member .pic3:hover .cover{
+    left: 62px !important;
+  }
+
+  #team .member .pic3 img.jpe {
+    width: 250px;
+    height: 300px;
+    max-width: 300px;
+  }
+
+  #team .member .pic3:hover .cover.jpe{
+    bottom: 23% !important;
+  }
+}
+
+#team .member .pic3 {
+  margin-bottom: 15px;
+  overflow: hidden;
+  height: 260px;
+}
+
+#team .member .pic3:hover .cover{
+  position: absolute;
+  bottom: 31%;
+  background: rgba(255, 255, 255, 0.8);
+  width: 251px;
+  left: 17px;
+  height: 260px;
+}
+
+#team .member .pic3:hover .cover p{
+  margin-top: 150px;
+  color:#ed2a5c;
+  font-size: 0.8rem;
+}
+
+#team .member .pic3 img {
+  max-width: 100%;
+  width: 250px;
+}
+/* fin para 4 fotos por columna*/
+
 #team .member .pic2 {
   margin-bottom: 15px;
   overflow: hidden;
