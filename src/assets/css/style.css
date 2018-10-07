@@ -217,7 +217,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#hero .btn-get-started {
+.btn-get-started {
   font-family: "Aller", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
@@ -232,9 +232,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-#hero .btn-get-started:hover {
+.btn-get-started:hover {
   background: #ed2a5c;
   border: 2px solid #ed2a5c;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -534,25 +535,31 @@ app-header.mobile-nav-active #mobile-nav-toggle {
 /* Inbound Section
 --------------------------------*/
 #inbound { 
-  background: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/inbound-bg.jpg) fixed center center;
+  background-size: cover;
   padding: 80px 0;
+  height: 90vh;
 }
 
-#inbound .inbound-container .background {
+/* #inbound .inbound-container .background {
   min-height: 500px;
   background-size: cover;
   background: url(../img/inbound.jpg) center top no-repeat;
   margin-bottom: 10px;
-}
+} */
 
-#inbound .inbound-container .content {
+/* #inbound .inbound-container .content {
   background: #fff;
-}
+} */
 
 #inbound .inbound-container .title {
-  color: #333;
+  color: #fff;
   font-weight: 700;
   font-size: 32px;
+}
+
+#inbound p {
+  color: #eee;
 }
 
 @media (max-width: 768px) {
@@ -578,11 +585,14 @@ app-header.mobile-nav-active #mobile-nav-toggle {
 /* Neuroturism Section
 --------------------------------*/
 #neuroturism {
-  background: #f7f7f7;
-  padding: 80px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/neuroturism-bg.jpg) fixed center center;
+  background-size: cover;
+  padding: 80px 10px;
+  min-height: 90vh;
+  height: auto;
 }
 
-#neuroturism .neuroturism-container .background {
+/* #neuroturism .neuroturism-container .background {
   min-height: 300px;
   background: url(../img/neuromarketing.jpg) center top no-repeat;
   margin-bottom: 10px;
@@ -590,12 +600,22 @@ app-header.mobile-nav-active #mobile-nav-toggle {
 
 #neuroturism .neuroturism-container .content {
   background: #f7f7f7;
-}
+} */
 
 #neuroturism .neuroturism-container .title {
-  color: #333;
+  color: #fff;
   font-weight: 700;
   font-size: 32px;
+}
+
+#neuroturism p {
+  color: #eee;
+}
+
+@media (max-width: 768px) {
+  #neuroturism .neuroturism-container .title {
+    padding-top: 15px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -613,14 +633,12 @@ app-header.mobile-nav-active #mobile-nav-toggle {
 }
 
 #neuroturism .neuroturism-container .icon-box {
-  background: #f7f7f7;
   background-size: cover;
   padding: 0 0 30px 0;
 }
 
 #neuroturism .neuroturism-container .icon-box .icon {
   float: left;
-  background: #f7f7f7;
   padding: 16px;
   border-radius: 50%;
   border: 2px solid #ed2a5c;
@@ -640,7 +658,7 @@ app-header.mobile-nav-active #mobile-nav-toggle {
 }
 
 #neuroturism .neuroturism-container .icon-box .title a {
-  color: #111;
+  color: #eee;
 }
 
 #neuroturism .neuroturism-container .icon-box .description {
@@ -796,7 +814,7 @@ app-header.mobile-nav-active #mobile-nav-toggle {
   #call-to-action .cta-btn-container {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
   }
 }
 
@@ -1647,4 +1665,3 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::after {
   display: flex;
   justify-content: center;
 }
-
