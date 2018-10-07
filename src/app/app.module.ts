@@ -24,12 +24,11 @@ import { AuthGuard } from './core/auth.guard';
 import { BackofficeModule } from './backoffice/backoffice.module';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
     NopagefoundComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     APP_ROUTES,
@@ -41,7 +40,11 @@ import { BackofficeModule } from './backoffice/backoffice.module';
     CoreModule,
     BackofficeModule,
   ],
-  providers: [AuthGuard, DatePipe, { provide: LOCALE_ID, useValue: "es-AR" }],
+  providers: [
+    AuthGuard, 
+    DatePipe, 
+    { provide: LOCALE_ID, useValue: "es-AR" },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

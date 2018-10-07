@@ -692,13 +692,20 @@ app-header.mobile-nav-active #mobile-nav-toggle {
   padding: 80px 0 60px 0;
 }
 
+#services i {
+  color: #ed2a5c;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+
 #services .box {
   padding: 50px 20px;
   margin-bottom: 50px;
   text-align: center;
   border: 1px solid #e6e6e6;
   border-top-right-radius: 50%;
-  height: 200px;
+  height: 220px;
   position: relative;
   background: #fafafa;
   border-radius: 0px 55px 0px 0px;
@@ -721,7 +728,7 @@ app-header.mobile-nav-active #mobile-nav-toggle {
 #services .icon {
   position: absolute;
   top: -23px;
-  left: calc(50% - 36px);
+  left: calc(50% - 17px);
   transition: 0.2s;
   border-radius: 50%;
   display: inline-block;
