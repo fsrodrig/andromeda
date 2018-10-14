@@ -1665,3 +1665,8 @@ input[type=checkbox]:not(:disabled).tabbed:focus~.lever::after {
   display: flex;
   justify-content: center;
 }
+
+.card-img-overlay {
+  height: 100px;
+  background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,0))
+}
