@@ -22,6 +22,7 @@ import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './core/auth.guard';
 import { BackofficeModule } from './backoffice/backoffice.module';
+import { ShareButtonsModule } from '@ngx-share/buttons';
 
 
 @NgModule({
@@ -33,17 +34,18 @@ import { BackofficeModule } from './backoffice/backoffice.module';
   imports: [
     APP_ROUTES,
     BrowserModule,
-    ReactiveFormsModule, 
+    ReactiveFormsModule,
     FormsModule,
     PublicModule,
     AngularFireModule.initializeApp(environment.firebase),
     CoreModule,
     BackofficeModule,
+    ShareButtonsModule
   ],
   providers: [
-    AuthGuard, 
-    DatePipe, 
-    { provide: LOCALE_ID, useValue: "es-AR" },
+    AuthGuard,
+    DatePipe,
+    { provide: LOCALE_ID, useValue: 'es-AR' },
   ],
   bootstrap: [AppComponent]
 })

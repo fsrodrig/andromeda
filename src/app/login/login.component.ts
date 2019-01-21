@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  user: User
+  user: User;
   error: string = null;
 
   constructor(
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   ingresar( forma: NgForm ) {
-    
+
     if (forma.invalid) {
       return;
     }
@@ -34,14 +34,14 @@ export class LoginComponent implements OnInit {
                   this._router.navigate(['/back-office']);
                 })
                 .catch( (res) => {
-                  if (res.code === "auth/wrong-password") {
-                    this.error = "Contraseña incorrecta"
-                  } else if (res.code === "auth/invalid-email") {
-                    this.error = "Usuario o contraseña incorrecta"
+                  if (res.code === 'auth/wrong-password') {
+                    this.error = 'Contraseña incorrecta';
+                  } else if (res.code === 'auth/invalid-email') {
+                    this.error = 'Usuario o contraseña incorrecta';
                   } else {
                     console.log('error :', res);
                   }
-                })
+                });
   }
 
 }
