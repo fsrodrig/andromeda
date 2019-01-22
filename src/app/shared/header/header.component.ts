@@ -21,7 +21,7 @@ export class HeaderComponent implements OnChanges {
 
   getRoute() {
     if (this._router.url !== '/home' ) {
-      return true;
+      return true
     }
     return false;
   }
@@ -30,7 +30,7 @@ export class HeaderComponent implements OnChanges {
     this._router.navigate(['/home']);
   }
 
-  @HostListener('window:scroll', [])
+  @HostListener("window:scroll", [])
   onWindowScroll() {
     const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     if (number === 0 && !this.getRoute()) {
