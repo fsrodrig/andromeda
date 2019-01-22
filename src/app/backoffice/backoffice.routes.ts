@@ -6,7 +6,7 @@ import { BackofficeComponent,
         PostViewComponent } from './backoffice.index';
 
 const routes: Routes = [
-  { 
+  {
         path: 'back-office',
         component: BackofficeComponent,
         canActivate: [AuthGuard],

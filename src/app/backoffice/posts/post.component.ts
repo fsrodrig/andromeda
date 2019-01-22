@@ -19,7 +19,6 @@ export class PostComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
     this.posts = this._post.get();
   }
 
@@ -33,52 +32,52 @@ export class PostComponent implements OnInit {
 
   delete( post: Post, index: number) {
     swal({
-			title: `Dar de baja/Eliminar Post`,
-			text: 'Seleccione una opción',
-			icon: 'warning',
-			dangerMode: true,
-			buttons: {
-				cancel: {
-					text: 'Cancelar',
-					value: 'cancel',
-					visible: true,
-					className: '',
-					closeModal: true,
-				},
-				baja: {
-					text: 'Dar de baja',
-					value: 'baja',
-					visible: true,
-					className: '',
-					closeModal: true,
-				},
-				eliminar: {
-					text: 'Eliminar',
-					value: 'eliminar',
-					visible: true,
-					className: '',
-					closeModal: true
-				}
-			}
-		})
-			.then((value) => {
-				if (value === 'baja') {
-					post.estado = false;
+      title: `Dar de baja/Eliminar Post`,
+      text: 'Seleccione una opción',
+      icon: 'warning',
+      dangerMode: true,
+      buttons: {
+        cancel: {
+          text: 'Cancelar',
+          value: 'cancel',
+          visible: true,
+          className: '',
+          closeModal: true,
+        },
+        baja: {
+          text: 'Dar de baja',
+          value: 'baja',
+          visible: true,
+          className: '',
+          closeModal: true,
+        },
+        eliminar: {
+          text: 'Eliminar',
+          value: 'eliminar',
+          visible: true,
+          className: '',
+          closeModal: true
+        }
+      }
+    })
+      .then((value) => {
+        if (value === 'baja') {
+          post.estado = false;
           this._post.update(post)
                       .then(
-						            () => {
-						            	swal({ title: `Post dado de baja con éxito`, icon: 'success' });
-						            })
+                        () => {
+                          swal({ title: `Post dado de baja con éxito`, icon: 'success' });
+                        })
                       .catch((err) =>  console.log('reventó el delete', err));
-				}
-				if (value === 'eliminar') {
+        }
+        if (value === 'eliminar') {
           this._post.delete(post)
                       .then(
-						            () => {
-						            	swal({ title: `Post eliminado con éxito`, icon: 'success' });
+                        () => {
+                          swal({ title: `Post eliminado con éxito`, icon: 'success' });
                         })
                       .catch((err) => console.log('reventó el delete', err));
-				}
+        }
     });
   }
 
