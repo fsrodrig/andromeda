@@ -24,12 +24,12 @@ export class PostComponent implements OnInit {
   }
 
   public create() {
-		this._router.navigate(['back-office/posts', 'new']);
-	}
+    this._router.navigate(['back-office/posts', 'new']);
+  }
 
-	public edit(post: Post) {
-		this._router.navigate(['back-office/posts', 'edit', post.id]);
-	}
+  public edit(post: Post) {
+    this._router.navigate(['back-office/posts', 'edit', post.id]);
+  }
 
   delete( post: Post, index: number) {
     swal({
@@ -39,24 +39,24 @@ export class PostComponent implements OnInit {
 			dangerMode: true,
 			buttons: {
 				cancel: {
-					text: "Cancelar",
+					text: 'Cancelar',
 					value: 'cancel',
 					visible: true,
-					className: "",
+					className: '',
 					closeModal: true,
 				},
 				baja: {
-					text: "Dar de baja",
+					text: 'Dar de baja',
 					value: 'baja',
 					visible: true,
-					className: "",
+					className: '',
 					closeModal: true,
 				},
 				eliminar: {
-					text: "Eliminar",
+					text: 'Eliminar',
 					value: 'eliminar',
 					visible: true,
-					className: "",
+					className: '',
 					closeModal: true
 				}
 			}
@@ -69,7 +69,7 @@ export class PostComponent implements OnInit {
 						            () => {
 						            	swal({ title: `Post dado de baja con éxito`, icon: 'success' });
 						            })
-                      .catch((err) =>  console.log('reventó el delete', err))
+                      .catch((err) =>  console.log('reventó el delete', err));
 				}
 				if (value === 'eliminar') {
           this._post.delete(post)
@@ -77,9 +77,9 @@ export class PostComponent implements OnInit {
 						            () => {
 						            	swal({ title: `Post eliminado con éxito`, icon: 'success' });
                         })
-                      .catch((err) => console.log('reventó el delete', err))
+                      .catch((err) => console.log('reventó el delete', err));
 				}
-			});
+    });
   }
 
 

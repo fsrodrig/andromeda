@@ -14,21 +14,21 @@ export class PostNewComponent {
 
   form: FormGroup;
 
-  portada='posts/portadas';
-  contenido = 'posts/contenido'
-  
+  portada = 'posts/portadas';
+  contenido = 'posts/contenido';
+
   isSaving = false;
   isCargada = false;
 
-  config = {  
+  config = {
     height: '300px',
     toolbar: [
-	    // [groupName, [list of button]]
-	    ['misc', ['fullscreen','codeview', 'undo', 'redo']],
-	    // ['style', ['bold', 'italic', 'underline']],
-	    ['font', ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'clear']],
-	    ['fontsize', ['fontname', 'fontsize', 'color']],
-	    ['para', ['style0', 'ul', 'ol', 'paragraph', 'height']],
+      // [groupName, [list of button]]
+      ['misc', ['fullscreen', 'codeview', 'undo', 'redo']],
+      // ['style', ['bold', 'italic', 'underline']],
+      ['font', ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'clear']],
+      ['fontsize', ['fontname', 'fontsize', 'color']],
+      ['para', ['style0', 'ul', 'ol', 'paragraph', 'height']],
       ['insert', ['table', 'picture', 'link', 'video', 'hr']]
     ],
     disableDragAndDrop: true
@@ -58,19 +58,19 @@ export class PostNewComponent {
 
   save() {
     if (this.form.valid) {
-      let fecha = new Date(this.form.value.fecha);
-      fecha.setDate(fecha.getDate() +1); // Si no hago esto me devuelve un dia menos
+      const fecha = new Date(this.form.value.fecha);
+      fecha.setDate(fecha.getDate() + 1); // Si no hago esto me devuelve un dia menos
 
       this.isSaving = true;
       const post: Post = {
         titulo: this.form.value.titulo,
-        autor:this.form.value.autor,
+        autor: this.form.value.autor,
         fecha: fecha,
-        foto:this.form.value.foto,
+        foto: this.form.value.foto,
         contenido: this.form.value.html,
         estado: this.form.value.estado,
         resumen: this.form.value.resumen
-      }
+      };
 
       this._post.add(post)
                   .then(
@@ -85,7 +85,7 @@ export class PostNewComponent {
                       this.isSaving = false;
                       swal('Error!', err, 'error');
                     }
-                  )
+                  );
     }
   }
 

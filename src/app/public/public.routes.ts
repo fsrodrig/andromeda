@@ -1,6 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 import { PublicComponent } from './public.component';
-import { 
+import {
     BlogComponent,
     HomeComponent,
     PublicPostComponent
@@ -23,4 +23,4 @@ const publicRoutes: Routes = [
     }
 ];
 
-export const PUBLIC_ROUTES = RouterModule.forChild(publicRoutes); 
+export const PUBLIC_ROUTES = RouterModule.forChild(publicRoutes);

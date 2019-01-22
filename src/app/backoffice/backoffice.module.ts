@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthGuard } from '../core/auth.guard';
 import { BACKOFFICE_ROUTES } from './backoffice.routes';
-import { 
+import {
   BackofficeComponent,
   PostNewComponent,
   PostViewComponent
@@ -25,13 +25,13 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     AngularFireStorageModule
   ],
   declarations: [
-    BackofficeComponent, 
+    BackofficeComponent,
     PostViewComponent,
     PostNewComponent,
     PostComponent,
     ImgUploadComponent,
     DropFilesDirective,
-    
+
   ],
     providers: [
       AuthGuard,

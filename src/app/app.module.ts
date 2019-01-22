@@ -6,6 +6,10 @@ import { AngularFireModule } from '@angular/fire';
 import { CoreModule } from './core/core.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DatePipe, registerLocaleData } from '@angular/common';
+import { BackofficeModule } from './backoffice/backoffice.module';
+import { ShareButtonsModule } from '@ngx-share/buttons';
+import { HttpClientModule } from '@angular/common/http';
+
 import localeEs from '@angular/common/locales/es-AR';
 import localeEsExtra from '@angular/common/locales/extra/es-AR';
 // Registro idioma español
@@ -21,8 +25,7 @@ import { AppComponent } from './app.component';
 import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './core/auth.guard';
-import { BackofficeModule } from './backoffice/backoffice.module';
-import { ShareButtonsModule } from '@ngx-share/buttons';
+
 
 
 @NgModule({
@@ -40,7 +43,8 @@ import { ShareButtonsModule } from '@ngx-share/buttons';
     AngularFireModule.initializeApp(environment.firebase),
     CoreModule,
     BackofficeModule,
-    ShareButtonsModule
+    ShareButtonsModule.forRoot(),
+    HttpClientModule
   ],
   providers: [
     AuthGuard,

@@ -21,6 +21,22 @@
       </div>
 
       <div class="container card-body" [ngxSummernoteView]="post.contenido"></div>
+      <hr>
+      <div class="container">
+        <div class="row text-center btn-volver mb-3">
+          <span>Compartir</span>
+          </div>
+          <div class="row btn-volver">
+              <share-buttons
+              [include]="['facebook','whatsapp','email','copy']"
+              [show]="5"
+              [title]="post.titulo"
+              [description]="post.resumen"
+              [image]="post.foto"
+              [autoSetMeta]="false"></share-buttons>
+          </div>
+      </div>
+      <hr>
       <div class="btn-volver">
         <button type="button" (click)="goBack()" class="btn btn-more-info">Volver</button>
       </div>
