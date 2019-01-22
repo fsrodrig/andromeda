@@ -5,7 +5,7 @@ const url = require('url');
 
 const app = express();
 
-const appUrl = 'www.andromedaagencia.com';
+const appUrl = 'https://www.andromedaagencia.com';
 const renderUrl = 'https://render-tron.appspot.com/render';
 
 
@@ -40,6 +40,8 @@ function detectbot(userAgent) {
 
   const agent = userAgent.toLowerCase();
 
+  console.warn('el bot', agent);
+
   for (const bot of bots) {
     if (agent.indexOf(bot) > -1) {
       console.log('bot :', bot, agent);
@@ -59,6 +61,8 @@ const isBot = detectbot(req.headers['user-agent']);
 if (isBot) {
   const botUrl = generateUrl(req);
 
+  console.log(`${renderUrl}/${botUrl}`)
+
   fetch(`${renderUrl}/${botUrl}`)
     .then( res => res.text() )
     .then( body => {
@@ -67,11 +71,13 @@ if (isBot) {
       res.set('Vary', 'User-Agent');
 
       res.send(body.toString());
+
+      console.log(body.toString())
     });
 
 } else {
 
-  fetch(`https://${appUrl}`)
+  fetch(`${appUrl}`)
     .then( res => res.text())
     .then( body => {
       res.send(body.toString());
