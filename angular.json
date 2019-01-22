@@ -28,7 +28,7 @@
               "node_modules/summernote/dist/summernote-lite.css"
             ],
             "scripts": [
-	            "node_modules/summernote/dist/summernote-lite.js"
+              "node_modules/summernote/dist/summernote-lite.js"
             ]
           },
           "configurations": {
@@ -95,6 +95,29 @@
             "exclude": [
               "**/node_modules/**"
             ]
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/LandingPage-server",
+            "main": "src/main.server.ts",
+            "tsConfig": "src/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": {
+                "scripts": false,
+                "styles": true
+              }
+            }
           }
         }
       }

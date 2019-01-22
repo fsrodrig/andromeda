@@ -36,7 +36,7 @@ import { AuthGuard } from './core/auth.guard';
   ],
   imports: [
     APP_ROUTES,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     ReactiveFormsModule,
     FormsModule,
     PublicModule,
