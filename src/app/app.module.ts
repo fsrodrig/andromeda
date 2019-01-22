@@ -26,7 +26,8 @@ import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './core/auth.guard';
 
-
+// Universal
+import { BrowserTransferStateModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { AuthGuard } from './core/auth.guard';
   ],
   imports: [
     APP_ROUTES,
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule.withServerTransition({ appId: 'andromeda-landing' }),
     ReactiveFormsModule,
     FormsModule,
     PublicModule,
@@ -44,7 +45,8 @@ import { AuthGuard } from './core/auth.guard';
     CoreModule,
     BackofficeModule,
     ShareButtonsModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    BrowserTransferStateModule
   ],
   providers: [
     AuthGuard,
